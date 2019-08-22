@@ -50,7 +50,7 @@ class DrawCenterRect {
             StaticLayout(text , mTextPaint, width, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false)
         }
 
-        canvas?.translate(mColumnWidth.toFloat() + row * width + row * mSpace / size + width / 2,
+        canvas?.translate(mColumnWidth.toFloat() + row * width + (row+1) * mSpace / size + width / 2,
                 mStartPosition.toFloat() + mRowHeight.toFloat() + startColumn * mColumnHeight + (startColumn + 1) * mSpace / size+ (mColumnHeight * (endColumn - startColumn)+(endColumn - startColumn - 1) * mSpace / size - myStaticLayout.height) / 2)
         myStaticLayout.draw(canvas)
         canvas?.restore()

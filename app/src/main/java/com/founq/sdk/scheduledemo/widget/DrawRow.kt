@@ -72,7 +72,7 @@ class DrawRow {
                 } else {
                     StaticLayout(mDateList[i] , mTextPaint, width, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false)
                 }
-                canvas?.translate(mColumnWidth.toFloat() + i * width + i * mSpace / size + width / 2,
+                canvas?.translate(mColumnWidth.toFloat() + i * width + (i+1) * mSpace / size + width / 2,
                         (mRowHeight - myStaticLayout1.height).toFloat() / 2)
                 myStaticLayout1.draw(canvas)
                 canvas?.restore()
